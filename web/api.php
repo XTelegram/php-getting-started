@@ -148,7 +148,7 @@ $dat = curl_exec($ch);
 echo $dat;
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, "http://us.proxiware.com:2000");
+curl_setopt($ch, CURLOPT_PROXY, 'us.proxiware.com:2000');
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -182,7 +182,7 @@ $curl = curl_exec($ch);
 
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, "http://us.proxiware.com:2000");
+curl_setopt($ch, CURLOPT_PROXY, 'us.proxiware.com:2000');
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -215,7 +215,7 @@ $curl1 = curl_exec($ch);
 ///////1st
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, "http://us.proxiware.com:2000");
+curl_setopt($ch, CURLOPT_PROXY, 'us.proxiware.com:2000');
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -255,7 +255,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, '{"operationName":"createPaymentIntent","va
 /////////Main req
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, "http://us.proxiware.com:2000");
+curl_setopt($ch, CURLOPT_PROXY, 'us.proxiware.com:2000');
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_intents/'.$pi.'/confirm');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
