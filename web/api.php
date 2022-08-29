@@ -140,7 +140,7 @@ echo $data;
 
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, "http://us.proxiware.com:2000");
+curl_setopt($ch, CURLOPT_PROXY, 'us.proxiware.com:2000');
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'http://ipinfo.io/json');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
