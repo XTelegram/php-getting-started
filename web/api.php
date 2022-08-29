@@ -138,8 +138,17 @@ curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 $data = curl_exec($ch);
 echo $data;
 
+
 $ch = curl_init();
-//curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
+curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
+//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
+curl_setopt($ch, CURLOPT_URL, 'http://ipinfo.io/json');
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+$dat = curl_exec($ch);
+echo $dat;
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -173,7 +182,7 @@ $curl = curl_exec($ch);
 
 
 $ch = curl_init();
-//curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
+curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -206,7 +215,7 @@ $curl1 = curl_exec($ch);
 ///////1st
 
 $ch = curl_init();
-//curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
+curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
