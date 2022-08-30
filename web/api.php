@@ -22,12 +22,6 @@ $ano = $separa[2];
 $cvv = $separa[3];
 
 
-function GetStr($string, $start, $end)
-{
-  $str = explode($start, $string);
-  $str = explode($end, $str[1]);
-  return $str[0];
-}
 
 if(file_exists(getcwd().('/cookie.txt'))){
   @unlink('cookie.txt');
