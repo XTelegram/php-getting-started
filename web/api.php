@@ -121,13 +121,19 @@ $street = "Street 46";
 */
 
 
+$ip = array(
+  1 => 'http://ca.proxiware.com:22000',
+  2 => 'http://ca.proxiware.com:22000',
+    ); 
+    $socks = array_rand($ip);
+    $socks5 = $ip[$socks];
 
 
-
+echo $socks5;
 /////////
-$proxy = 'http://us.proxiware.com:2000';
-$username = 'rahul';
-$password = 'rahul';
+//$proxy = 'http://us.proxiware.com:2000';
+//$username = 'rahul';
+//$password = 'rahul';
 
 
 $ch = curl_init();
