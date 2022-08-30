@@ -92,6 +92,10 @@ curl_close($ch);
 
 echo $resulta;
 echo $token;
+echo $cc;
+echo $cvv;
+echo $mes;
+echo $ano;
 ///====2nd req========///
 
  $ch = curl_init();
