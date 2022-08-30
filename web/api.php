@@ -89,6 +89,9 @@ $dcode = $resulta1['error']['decline_code'];
 $token = $resulta1['id'];
 $cvc = trim(strip_tags(getStr2($resulta,'"cvc_check": "','"')));
 curl_close($ch);
+
+echo $resulta;
+echo $token;
 ///====2nd req========///
 
  $ch = curl_init();
