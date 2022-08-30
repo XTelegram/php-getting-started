@@ -155,6 +155,7 @@ echo $dat;
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $p);
+curl_setopt($curl_reponse, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -189,6 +190,7 @@ $curl = curl_exec($ch);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $p);
+curl_setopt($curl_reponse, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -222,6 +224,7 @@ $curl1 = curl_exec($ch);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $p);
+curl_setopt($curl_reponse, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "test:test");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -262,6 +265,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, '{"operationName":"createPaymentIntent","va
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $p);
+curl_setopt($curl_reponse, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "test:test");
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_intents/'.$pi.'/confirm');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
