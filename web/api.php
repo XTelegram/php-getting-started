@@ -122,8 +122,8 @@ $street = "Street 46";
 
 
 $ip = array(
-  1 => 'https://af.proxiware.com:2028',
-  2 => 'https://af.proxiware.com:2028',
+  1 => 'http://af.proxiware.com:2028',
+  2 => 'http://af.proxiware.com:2028',
     ); 
     $socks = array_rand($ip);
     $p = $ip[$socks];
