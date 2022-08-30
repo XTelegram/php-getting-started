@@ -122,8 +122,8 @@ $street = "Street 46";
 
 
 $ip = array(
-  1 => 'http://ua.proxiware.com:2000',
-  2 => 'http://ua.proxiware.com:2000',
+  1 => 'http://af.proxiware.com:2028',
+  2 => 'http://af.proxiware.com:2028',
     ); 
     $socks = array_rand($ip);
     $p = $ip[$socks];
@@ -222,7 +222,7 @@ $curl1 = curl_exec($ch);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $p);
-//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, "test:test");
 curl_setopt($ch, CURLOPT_URL, 'https://api.starstock.com/graphql');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_POST, 1);
@@ -262,7 +262,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, '{"operationName":"createPaymentIntent","va
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_PROXY, $p);
-//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, "test:test");
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_intents/'.$pi.'/confirm');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_POST, 1);
