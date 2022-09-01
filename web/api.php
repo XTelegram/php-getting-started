@@ -131,7 +131,25 @@ if($state=="Alabama"){ $state="AL";
 }*/
 
 
+$ch = curl_init();
+//curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
+//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
+curl_setopt($ch, CURLOPT_URL, 'http://ipinfo.io/json');
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+$data = curl_exec($ch);
+echo $data;
 
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_PROXY, $p);
+//curl_setopt($curl_reponse, CURLOPT_PROXYPORT, $proxy_port);
+//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
+curl_setopt($curl, CURLOPT_PROXY, 'http://zproxy.lum-superproxy.io:22225');
+curl_setopt($curl, CURLOPT_PROXYUSERPWD, 'lum-customer-hl_dc379a83-zone-data_center:3yvhp78xnm7w');
+curl_setopt($ch, CURLOPT_URL, 'http://ipinfo.io/json');
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+$dat = curl_exec($ch);
+echo $dat;
 
 
 
