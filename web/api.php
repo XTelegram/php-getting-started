@@ -203,10 +203,10 @@ echo $token;
  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
    'Host:app.moonclerk.com',   
    'accept: application/json, text/plain, */*',
-   'X-Checkout-Signature:815f6NXl2U8WrGjEXuv7HXkIDcvvI8I5Tp1UiHArmK0=',
+//   'X-Checkout-Signature:815f6NXl2U8WrGjEXuv7HXkIDcvvI8I5Tp1UiHArmK0=',
    'content-type: application/json;charset=UTF-8',
    'X-Requested-With: XMLHttpRequest',
-   'X-CSRF-Token:zfo-UG-FDZpLM4pWdULat6tDQC9N89ugfLPSBAYx0w_H3KpphO6nhQ9C3moGQq6rav9FWM1dwjVunckPVRKFkw',
+//   'X-CSRF-Token:zfo-UG-FDZpLM4pWdULat6tDQC9N89ugfLPSBAYx0w_H3KpphO6nhQ9C3moGQq6rav9FWM1dwjVunckPVRKFkw',
    'Origin:https://app.moonclerk.com',
    'referer: https://app.moonclerk.com/pay/7bj96o4wja6i?embed=true',
    'user-agent: Mozilla/5.0 (Linux; Android 10; SM-A505GN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.117 Mobile Safari/537.36',
