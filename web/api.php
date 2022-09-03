@@ -191,7 +191,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=NA&muid=NA&sid=NA&pasted_fields=number&payment_user_agent=stripe.js%2F539dba3af%3B+stripe-js-v3%2F539dba3af&time_on_page=67953&key=pk_live_51JqxTMFjzs9C6LJIBllCeFHO0pUYRCwD92ErnuHKkrbxfizllbEz0thXMBkn0aaueRp3VQNmIEowY0OviLzhrYX400dqfWYQbv');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=NA&muid=NA&sid=NA&pasted_fields=number&payment_user_agent=stripe.js%2F539dba3af%3B+stripe-js-v3%2F539dba3af&time_on_page=67953&key=pk_live_51JqxTMFjzs9C6LJIBllCeFHO0pUYRCwD92ErnuHKkrbxfizllbEz0thXMBkn0aaueRp3VQNmIEowY0OviLzhrYX400dqfWYQbv');
 $result1 = curl_exec($ch);
 $token = trim(strip_tags(getStr($result1,'"id": "','"')));
 
